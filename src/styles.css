@@ -2,60 +2,119 @@
 
 :root {
   /* Font Size */
-  --fontSize-0: 0.833em;
-  --fontSize-1: 1em;
-  --fontSize-2: 1.2em;
-  --fontSize-3: 1.44em;
-  --fontSize-4: 1.728em;
-  --fontSize-5: 2.074em;
-  --fontSize-6: 2.488em;
+  --fontSize-0: 12px;
+  --fontSize-1: 14px;
+  --fontSize-2: 16px;
 
   /* Line Height */
   --lineHeight-0: 1;
-  --lineHeight-1: 1.25;
-  --lineHeight-2: 1.5;
+  --lineHeight-1: 1.2;
+  --lineHeight-2: 1.4;
 
-  /* Line Height */
+  /* Font Weight */
   --fontWeight-0: 400;
-  --fontWeight-1: 600;
+  --fontWeight-1: 500;
+  --fontWeight-2: 600;
 
-  /* Color */
-  --color-primary: #1a1f23;
-  --color-secondary: #5f7181;
-  --color-accent-light: #8870ff;
-  --color-accent-default: #6047ff;
-  --color-accent-dark: #4332d9;
-  --color-focus: #cf1726;
-  --color-background: #f9fafb;
-  --color-border: #e7ebee;
-
+  /* Color TBD */ 
+  --color-surface-400: #FFF;
+  --color-surface-300: #FFF;
+  --color-surface-200: #FAF9FB;
+  --color-surface-100: #F5F3F7;
+  --color-gray-500: #2B2233;
+  --color-gray-400: #4D4158;
+  --color-gray-300: #80708F;
+  --color-gray-200: #E0DCE5;
+  --color-gray-100:#F0ECF3;
+  --color-blue-400: #2562D4;
+  --color-blue-300: #3D74DB;
+  --color-blue-200: rgba(61, 116, 219, 0.50);
+  --color-blue-100: rgba(61, 116, 219, 0.09);  
+  
   /* Space */
   --space-0: 0;
   --space-1: 4px;
   --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 32px;
+  --space-3: 12px;
+  --space-4: 16px;
+
+  /* Border Radius */
+  --borderRadius-0: 0;
+  --borderRadius-1: 2px;
+  --borderRadius-2: 6px;
+
+  /* Box Shadow */
+  --boxShadow-lightest: 0px 0px 1px 0px rgba(43, 34, 51, 0.04);
+  --boxShadow-light: 0px 1px 2px 0px rgba(43, 34, 51, 0.04);
 }
 
-body {
+.uf-base {
   font-size: var(--fontSize-1);
   line-height: var(--lineHeight-2);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--color-gray-400);
 }
 
-form {
+.uf-container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-3);
+}
+
+.uf-container-header {
+  padding: var(--space-3);
+}
+
+.uf-heading {
+  font-size: var(--fontSize-2);
+  line-height: var(--lineHeight-1);
+  margin: var(--space-0);
+  color: var(--color-gray-500);
+  letter-spacing: -0.24;
+}
+
+.uf-container-main, 
+.uf-container-footer {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  padding: var(--space-3);
 }
 
-label {
+.uf-input, 
+.uf-textarea, 
+.uf-button {
+  padding: var(--space-2) var(--space-3);
+  line-height: var(--lineHeight-2);
+  border-radius: var(--borderRadius-2);
+  border: 1.5px solid var(--color-gray-200);
+}
+
+.uf-input:placeholder-shown,
+.uf-textarea:placeholder-shown {
+  color: var(--color-gray-300);
+}
+
+.uf-label {
   font-size: var(--fontSize-0);
   line-height: var(--lineHeight-1);
   font-weight: var(--fontWeight-1);
 }
 
-input {
-  padding: var(--space-2) var(--space-3);
+.uf-button {
+  font-weight: var(--fontWeight-2);
+  background-color: var(--color-surface-200);
+  box-shadow: var(--boxShadow-light);
+  cursor: pointer;
 }
+
+.uf-button:hover {
+  background-color: var(--color-surface-100);
+  box-shadow: var(--boxShadow-light);
+}
+
+.uf-button-accent {
+  color: var(--color-blue-400);
+}
+
