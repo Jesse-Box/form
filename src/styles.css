@@ -1,0 +1,61 @@
+@import "./normalize.css";
+
+:root {
+  /* Font Size */
+  --fontSize-0: 0.833em;
+  --fontSize-1: 1em;
+  --fontSize-2: 1.2em;
+  --fontSize-3: 1.44em;
+  --fontSize-4: 1.728em;
+  --fontSize-5: 2.074em;
+  --fontSize-6: 2.488em;
+
+  /* Line Height */
+  --lineHeight-0: 1;
+  --lineHeight-1: 1.25;
+  --lineHeight-2: 1.5;
+
+  /* Line Height */
+  --fontWeight-0: 400;
+  --fontWeight-1: 600;
+
+  /* Color */
+  --color-primary: #1a1f23;
+  --color-secondary: #5f7181;
+  --color-accent-light: #8870ff;
+  --color-accent-default: #6047ff;
+  --color-accent-dark: #4332d9;
+  --color-focus: #cf1726;
+  --color-background: #f9fafb;
+  --color-border: #e7ebee;
+
+  /* Space */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 32px;
+}
+
+body {
+  font-size: var(--fontSize-1);
+  line-height: var(--lineHeight-2);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--fontSize-0);
+  line-height: var(--lineHeight-1);
+  font-weight: var(--fontWeight-1);
+}
+
+input {
+  padding: var(--space-2) var(--space-3);
+}
